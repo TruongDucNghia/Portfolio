@@ -1,0 +1,61 @@
+<nz-layout>
+    <nz-sider nzCollapsible nzWidth="200px">
+        <div class="logo">
+            <img src="https://www.kooding.com/images/logo_files/logo-nav-retina.png" alt="">
+        </div>
+        <ul nz-menu nzTheme="dark" nzMode="inline">
+            <li nz-menu-item>
+                <a routerLink="/">
+                    <i nz-icon nzType="pie-chart"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li nz-submenu nzTitle="Products" nzIcon="dingtalk">
+                <ul>
+                    <a routerLink="products/list">
+                        <li nz-menu-item>List products</li>
+                    </a>
+                    <a routerLink="products/add">
+                        <li nz-menu-item>Add products</li>
+                    </a>
+                </ul>
+            </li>
+            <li nz-submenu nzTitle="Category" nzIcon="desktop">
+                <ul>
+                    <a routerLink="category">
+                        <li nz-menu-item>List Category</li>
+                    </a>
+                    <a routerLink="category/add">
+                        <li nz-menu-item>Add Category</li>
+                    </a>
+                </ul>
+            </li>
+            <li nz-menu-item>
+                <i nz-icon nzType="desktop"></i>
+                <span>Option 2</span>
+            </li>
+            <li nz-submenu nzTitle="User" nzIcon="user">
+                <span>Option 3</span>
+            </li>
+            <li nz-submenu nzTitle="Team" nzIcon="team">
+                <span>Option 2</span>
+            </li>
+            <li nz-menu-item>
+                <i nz-icon nzType="login" nzTheme="outline"></i>
+                <span>Logout</span>
+            </li>
+        </ul>
+    </nz-sider>
+    <nz-layout>
+        <nz-header></nz-header>
+        <nz-content>
+            <nz-breadcrumb>
+                <h3>Welcome admin Mr.Nghia</h3>
+            </nz-breadcrumb>
+            <div class="inner-content">
+                <router-outlet></router-outlet>
+            </div>
+        </nz-content>
+        <nz-footer>Ant Design ©2020 Implement By Angular</nz-footer>
+    </nz-layout>
+</nz-layout>
