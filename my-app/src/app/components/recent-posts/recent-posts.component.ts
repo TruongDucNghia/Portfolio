@@ -1,3 +1,5 @@
+import { posts } from './../../model/posts';
+import { PostsService } from './../../services/posts.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,8 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./recent-posts.component.scss']
 })
 export class RecentPostsComponent implements OnInit {
-
-  constructor() { }
+  data! :posts[]
+  constructor(
+    private PostsService: PostsService
+  ) { 
+    this.PostsService.get2Posts().subscribe(data =>{
+      this.data = data
+      console.log(data);
+      
+    })
+  }
 
   ngOnInit(): void {
   }

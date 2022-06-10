@@ -5,6 +5,10 @@ import { HomePageComponent } from './page/home-page/home-page.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BlogComponent } from './page/blog/blog.component';
+import { AddProjectComponent } from './page/admin/add-project/add-project.component';
+import { AddPostsComponent } from './page/admin/add-posts/add-posts.component';
+import { ListPostsComponent } from './page/admin/list-posts/list-posts.component';
+import { ListProjectComponent } from './page/admin/list-project/list-project.component';
 
 const routes: Routes = [
   {path: "", component: LayoutClientComponent, children:[
@@ -13,7 +17,12 @@ const routes: Routes = [
     {path: "contact", component: ContactComponent}
   ]},
   {path: "admin", component: LayoutAdminComponent, children:[
-    
+    {path: "posts/add", component: AddPostsComponent},
+    {path: "posts/list", component: ListPostsComponent},
+    {path: "posts/:id/edit", component: AddPostsComponent},
+    {path: "project/add", component: AddProjectComponent},
+    {path: "project/list", component: ListProjectComponent},
+    {path: "project/:id/edit", component: AddProjectComponent},
   ]},
 ];
 

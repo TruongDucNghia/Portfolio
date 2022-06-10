@@ -28,6 +28,10 @@ import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
+import { AddPostsComponent } from './page/admin/add-posts/add-posts.component';
+import { ListPostsComponent } from './page/admin/list-posts/list-posts.component';
+import { AddProjectComponent } from './page/admin/add-project/add-project.component';
+import { ListProjectComponent } from './page/admin/list-project/list-project.component';
 registerLocaleData(en);
 
 @NgModule({
@@ -42,7 +46,11 @@ registerLocaleData(en);
     BlogComponent,
     ContactComponent,
     LayoutClientComponent,
-    LayoutAdminComponent
+    LayoutAdminComponent,
+    AddPostsComponent,
+    ListPostsComponent,
+    AddProjectComponent,
+    ListProjectComponent
   ],
   imports: [
     BrowserModule,

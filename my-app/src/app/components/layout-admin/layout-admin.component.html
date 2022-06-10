@@ -1,7 +1,7 @@
 <nz-layout>
     <nz-sider nzCollapsible nzWidth="200px">
         <div class="logo">
-            <img src="https://www.kooding.com/images/logo_files/logo-nav-retina.png" alt="">
+            <img src="https://www.kooding.com/images/logo_files/logo-nav-retina.png" alt="" width="290px">
         </div>
         <ul nz-menu nzTheme="dark" nzMode="inline">
             <li nz-menu-item>
@@ -10,23 +10,23 @@
                     <span>Dashboard</span>
                 </a>
             </li>
-            <li nz-submenu nzTitle="Products" nzIcon="dingtalk">
+            <li nz-submenu nzTitle="Project" nzIcon="dingtalk">
                 <ul>
-                    <a routerLink="products/list">
-                        <li nz-menu-item>List products</li>
+                    <a routerLink="project/list">
+                        <li nz-menu-item>List projects</li>
                     </a>
-                    <a routerLink="products/add">
-                        <li nz-menu-item>Add products</li>
+                    <a routerLink="project/add">
+                        <li nz-menu-item>Add projects</li>
                     </a>
                 </ul>
             </li>
-            <li nz-submenu nzTitle="Category" nzIcon="desktop">
+            <li nz-submenu nzTitle="Posts" nzIcon="desktop">
                 <ul>
-                    <a routerLink="category">
-                        <li nz-menu-item>List Category</li>
+                    <a routerLink="posts/list">
+                        <li nz-menu-item>List Posts</li>
                     </a>
-                    <a routerLink="category/add">
-                        <li nz-menu-item>Add Category</li>
+                    <a routerLink="posts/add">
+                        <li nz-menu-item>Add Posts</li>
                     </a>
                 </ul>
             </li>
@@ -53,7 +53,9 @@
                 <h3>Welcome admin Mr.Nghia</h3>
             </nz-breadcrumb>
             <div class="inner-content">
-                <router-outlet></router-outlet>
+                <div class="container">
+                    <router-outlet></router-outlet>
+                </div>
             </div>
         </nz-content>
         <nz-footer>Ant Design ©2020 Implement By Angular</nz-footer>

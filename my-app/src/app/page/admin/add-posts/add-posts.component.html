@@ -1,0 +1,24 @@
+<h1>add Posts</h1>
+<form (ngSubmit)="onSubmit()" #formAdd="ngForm">
+    <div class="row">
+        <div class="form-group">
+            <label>Name:</label>
+            <input [(ngModel)]="posts.name" name="name" type="text" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Image:</label>
+            <input (change)="onChangeGetImg($event)" [(ngModel)]="posts.img" name="img" type="file"
+                class="form-control" />
+            <img src={{posts.img}} alt="" width="200px" />
+        </div>
+        <div class="form-group">
+            <label for="">Desc Short:</label>
+            <textarea [(ngModel)]="posts.descShort" name="descShort" class="form-control" cols="20" ></textarea>
+        </div>
+        <div class="form-group">
+            <label>Desc:</label>
+            <textarea  [(ngModel)]="posts.desc" name="desc" class="form-control" cols="30" rows="10"></textarea>
+        </div>
+        <button type="submit" class="btn btn-success mt-5">Submit</button>
+    </div>
+</form>

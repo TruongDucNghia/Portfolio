@@ -1,0 +1,28 @@
+<h1>add Project</h1>
+<form (ngSubmit)="onSubmit()" #formAdd="ngForm">
+    <div class="row">
+        <div class="form-group">
+            <label>Name:</label>
+            <input [(ngModel)]="project.name" name="name" type="text" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Image:</label>
+            <input (change)="onChangeGetImg($event)" [(ngModel)]="project.img" name="img" type="file"
+                class="form-control" />
+            <img src={{project.img}} alt="" width="200px" />
+        </div>
+        <div class="form-group">
+            <label for="">Tool:</label>
+            <input [(ngModel)]="project.tool" name="tool" type="text" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="">Link:</label>
+            <input [(ngModel)]="project.link" name="link" type="text" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Desc:</label>
+            <textarea  [(ngModel)]="project.desc" name="desc" class="form-control" cols="30" rows="10"></textarea>
+        </div>
+        <button type="submit" class="btn btn-success mt-5">Submit</button>
+    </div>
+</form>

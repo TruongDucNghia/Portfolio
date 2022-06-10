@@ -5,60 +5,22 @@
                 <h3>Work</h3>
             </div>
             <div class="content-main">
-                <div class="content-main__item">
+                <div class="content-main__item" *ngFor="let item of data">
                     <div class="content-item__img">
-                        <img src="https://res.cloudinary.com/dbpw1enlu/image/upload/v1654181621/285145146_521656206306028_4842981421232227932_n_sefblu.jpg"
-                            alt="">
+                        <a href={{item.link}} target="_blank" rel="noopener noreferrer">
+                            <img src={{item.img}} alt="">
+                        </a>
                     </div>
                     <div class="content-item__main">
                         <div class="content-item__title">
-                            <h4>Designing Dashboards</h4>
+                            <h4>{{item.name}}</h4>
                         </div>
                         <div class="content-item__properties">
-                            <div class="date">2020</div>
-                            <div class="tool">Dashboard</div>
+                            <div class="date">{{ item.createAt | date:'mediumDate' }}</div>
+                            <div class="tool">{{item.tool}}</div>
                         </div>
                         <div class="desc">
-                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
-                            consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
-                        </div>
-                    </div>
-                </div>
-                <div class="content-main__item">
-                    <div class="content-item__img">
-                        <img src="https://res.cloudinary.com/dbpw1enlu/image/upload/v1654181621/285145146_521656206306028_4842981421232227932_n_sefblu.jpg"
-                            alt="">
-                    </div>
-                    <div class="content-item__main">
-                        <div class="content-item__title">
-                            <h4>Designing Dashboards</h4>
-                        </div>
-                        <div class="content-item__properties">
-                            <div class="date">2020</div>
-                            <div class="tool">Dashboard</div>
-                        </div>
-                        <div class="desc">
-                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
-                            consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
-                        </div>
-                    </div>
-                </div>
-                <div class="content-main__item">
-                    <div class="content-item__img">
-                        <img src="https://res.cloudinary.com/dbpw1enlu/image/upload/v1654181621/285145146_521656206306028_4842981421232227932_n_sefblu.jpg"
-                            alt="">
-                    </div>
-                    <div class="content-item__main">
-                        <div class="content-item__title">
-                            <h4>Designing Dashboards</h4>
-                        </div>
-                        <div class="content-item__properties">
-                            <div class="date">2020</div>
-                            <div class="tool">Dashboard</div>
-                        </div>
-                        <div class="desc">
-                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
-                            consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                            {{item.desc}}
                         </div>
                     </div>
                 </div>
