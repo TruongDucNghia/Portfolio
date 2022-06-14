@@ -54,5 +54,12 @@
       "id": 4
     }
   ],
-  "users": []
+  "users": [
+    {
+      "email": "nghia@gmail.com",
+      "password": "$2a$10$drdBVD7yUESX0CrSpzA/seBtHAJqmySswqfafWpS7RAF5TRvtCtqu",
+      "username": "Truong Nghia",
+      "id": 1
+    }
+  ]
 }

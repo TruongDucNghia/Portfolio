@@ -8,7 +8,7 @@
                 <th>Images</th>
                 <th>Desc Short</th>
                 <th>Description</th>
-                <th>Setting</th>
+                <th colSpan="2">Setting</th>
             </tr>
         </thead>
         <tbody>
@@ -22,6 +22,8 @@
                 <td>{{posts.desc}}</td>
                 <td>
                     <button class="btn btn-danger" (click)="onHandleClick(posts.id!)">Delete</button>
+                </td>
+                <td>
                     <button class="btn btn-success ms-2" >
                         <a routerLink="/admin/posts/{{posts.id}}/edit">Update</a>
                     </button>

@@ -30,4 +30,7 @@ export class PostsService {
   get2Posts(): Observable<posts[]>{
     return this.http.get<posts[]>(`http://localhost:3000/posts?_sort=createAt&_order=desc&_limit=2`)
   }
+  signin(user: any){
+    return this.http.post(`http://localhost:3000/signin`, user)
+  }
 }

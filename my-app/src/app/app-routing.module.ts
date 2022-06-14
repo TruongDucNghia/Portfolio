@@ -1,3 +1,4 @@
+import { SigninComponent } from './page/users/signin/signin.component';
 import { LayoutAdminComponent } from './components/layout-admin/layout-admin.component';
 import { LayoutClientComponent } from './components/layout-client/layout-client.component';
 import { ContactComponent } from './page/contact/contact.component';
@@ -9,14 +10,16 @@ import { AddProjectComponent } from './page/admin/add-project/add-project.compon
 import { AddPostsComponent } from './page/admin/add-posts/add-posts.component';
 import { ListPostsComponent } from './page/admin/list-posts/list-posts.component';
 import { ListProjectComponent } from './page/admin/list-project/list-project.component';
+import { AuthGuard } from './components/auth.guard';
 
 const routes: Routes = [
   {path: "", component: LayoutClientComponent, children:[
     {path: '', component: HomePageComponent, pathMatch:'full'},
     {path: "blog", component: BlogComponent},
-    {path: "contact", component: ContactComponent}
+    {path: "contact", component: ContactComponent},
+    {path: "signin", component: SigninComponent}
   ]},
-  {path: "admin", component: LayoutAdminComponent, children:[
+  {path: "admin", canActivate: [AuthGuard], component: LayoutAdminComponent, children:[
     {path: "posts/add", component: AddPostsComponent},
     {path: "posts/list", component: ListPostsComponent},
     {path: "posts/:id/edit", component: AddPostsComponent},

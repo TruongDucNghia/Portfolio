@@ -32,6 +32,7 @@ import { AddPostsComponent } from './page/admin/add-posts/add-posts.component';
 import { ListPostsComponent } from './page/admin/list-posts/list-posts.component';
 import { AddProjectComponent } from './page/admin/add-project/add-project.component';
 import { ListProjectComponent } from './page/admin/list-project/list-project.component';
+import { SigninComponent } from './page/users/signin/signin.component';
 registerLocaleData(en);
 
 @NgModule({
@@ -50,7 +51,8 @@ registerLocaleData(en);
     AddPostsComponent,
     ListPostsComponent,
     AddProjectComponent,
-    ListProjectComponent
+    ListProjectComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,
