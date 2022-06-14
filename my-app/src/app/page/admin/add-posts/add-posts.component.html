@@ -3,7 +3,8 @@
     <div class="row">
         <div class="form-group">
             <label>Name:</label>
-            <input [(ngModel)]="posts.name" name="name" type="text" class="form-control" />
+            <input required [(ngModel)]="posts.name" #name="ngModel" name="name"  type="text" class="form-control" />
+            <div *ngIf="name.invalid && name.touched" class="alert alert-danger">Bạn phải nhập trường này !</div>
         </div>
         <div class="form-group">
             <label>Image:</label>
@@ -17,8 +18,8 @@
         </div>
         <div class="form-group">
             <label>Desc:</label>
-            <textarea  [(ngModel)]="posts.desc" name="desc" class="form-control" cols="30" rows="10"></textarea>
+            <textarea   [(ngModel)]="posts.desc" name="desc" class="form-control" cols="30" rows="10"></textarea>
         </div>
-        <button type="submit" class="btn btn-success mt-5">Submit</button>
+        <button [disabled]="!formAdd.valid" type="submit" class="btn btn-success mt-5">Submit</button>
     </div>
 </form>
